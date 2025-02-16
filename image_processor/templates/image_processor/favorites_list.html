@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites List</title>
+</head>
+<body>
+    <h1>Your Favorite Dishes</h1>
+    <ul>
+        {% for favorite in favorites %}
+            <li>{{ favorite }}</li>
+        {% empty %}
+            <li>No favorite dishes saved yet.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'home' %}"><button>Back to Home</button></a>
+</body>
+</html>
+

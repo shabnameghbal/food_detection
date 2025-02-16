@@ -1,0 +1,19 @@
+<!-- upload_success.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Success</title>
+</head>
+<body>
+    <h1>Image Uploaded Successfully</h1>
+    <img src="{{ image_url }}" alt="Uploaded Image" width="300">
+    <br>
+    <a href="{% url 'detect_ingredients' %}?image_url={{ image_url }}">
+        <button>Show Ingredients</button>
+    </a>
+</body>
+</html>
+
+
